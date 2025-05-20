@@ -9,7 +9,7 @@ except ValueError:
     print("Not a number❌")
     sys.exit()
 
-# Changed sets to lists to preserve duplicates and order
+
 history = {
     "history_add": [],
     "history_multiply": [],
@@ -106,5 +106,4 @@ elif see_history == 'n':
 else:
     print("Invalid option🛑❌")
 
-# Thank you message
 print(f"\n🎉 Thank you {name} for using the Basic Python Calculator! 🚀 Have a great day! 😊")
