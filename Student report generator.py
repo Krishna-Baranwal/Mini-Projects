@@ -66,10 +66,10 @@ def get_correct(subject, name):
     while True:
         try:
             ask_marks = float(input(f"🧾Enter marks of {name} in {subject}: "))
-            if 0 <= ask_marks <= 100:
+            if 0 <= ask_marks <= total_marks():
                 return ask_marks
             else:
-                print("Please enter between (0-100)")
+                print(f"Please enter between 0 - {total_marks()}")
         except ValueError:
             print("❗ Invalid input.🔄 Please enter a number.")
 
@@ -95,10 +95,11 @@ def one_to_eight():
     import time
     num_students = number_of_students()
     i = 0
+    get_toa_marks = total_marks()
     while i < num_students:
         get_stu_name = get_students_name()
         ge_st_ro = get_students_roll(get_stu_name)
-        get_toa_marks = total_marks()
+
 
         ma = get_correct("Maths", get_stu_name)
         en = get_correct("English", get_stu_name)
@@ -138,8 +139,7 @@ def one_to_eight():
         print(f"🏁 {'Overall Percentage':<26} | {'':<6} | {overall_grade:<5} | {overall_percentage:<9}% 🏁")
         print("🏁" * 60)
 
-
-        filename = f"{get_stu_name.replace(' ', '_')}_marks.txt"
+        filename = f"{get_stu_name.replace(' ', '_')}_{ge_st_ro}_marks.txt"
         with open(filename, "w") as file:
             file.write(f"Marks Report for {get_stu_name} (Roll No: {ge_st_ro})\n")
             file.write("-" * 50 + "\n")
@@ -154,3 +154,14 @@ def one_to_eight():
             file.write(f"{'G.K':<20} {gk:<8} {gd(gk):<8} {gk_1}%\n")
             file.write("-" * 50 + "\n")
             file.write(f"{'Overall Percentage':<20} {'':<8} {overall_grade:<8} {overall_percentage}%\n")
+
+            print(f"🏁 {'Total':<26} | {total_obtained:<6} | {'':<5} | {'':<9} 🏁")
+            if overall_percentage >= 33:
+                print("🎉 Result: Pass ✅")
+            else:
+                print("❌ Result: Fail")
+
+
+if __name__ == "__main__":
+    greet()
+    one_to_eight()
