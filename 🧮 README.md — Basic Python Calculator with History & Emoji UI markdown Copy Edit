@@ -1,0 +1,46 @@
+# 🧮 Basic Python Calculator with History 📜
+
+This is a fun and beginner-friendly Python project where users can:
+- Perform basic arithmetic operations (+, -, ×, ÷)
+- Choose custom order for subtraction & division
+- View the history of their calculations
+- Exit anytime, with a personalized thank you message 🎉
+
+---
+
+## 🛠️ Features
+
+✅ User-friendly input prompts  
+✅ Handles invalid input gracefully (e.g., letters instead of numbers)  
+✅ Tracks all previous results in session  
+✅ Emojis to make the interface interactive and fun  
+✅ Clean logic using functions, loops, and conditionals  
+
+---
+
+## 🧠 Skills Used
+
+- Python basics: `input()`, `print()`, `float`, `int`, `if/else`
+- Error Handling: `try/except`, `ZeroDivisionError`
+- Dictionaries and Lists to track calculation history
+- Looping and function design
+- Emoji UI (uses emoji in terminal output for fun 😄)
+
+---
+
+## 🔢 Operations Supported
+
+- ➕ Addition  
+- ➖ Subtraction (with user choice of order)  
+- ✖️ Multiplication  
+- ➗ Division (with zero division safety and order choice)  
+
+---
+
+## 💻 How to Run
+
+1. Download or clone the repo:
+   ```bash
+   git clone https://github.com/your-username/basic-python-calculator.git
+   cd basic-python-calculator
+  
