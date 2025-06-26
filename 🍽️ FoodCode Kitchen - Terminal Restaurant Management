@@ -1,0 +1,53 @@
+🍽️ FoodCode Kitchen - Terminal Restaurant Management
+FoodCode Kitchen is a simple Python-based terminal project for managing food orders in a vegetarian restaurant. It's beginner-friendly and includes billing, payment, email, and voice features.
+
+🚀 Features
+✅ Category-wise Menu: Chilly/Spicy, Sweets, Beverages, Fast Food, South Indian, Snacks
+
+🛒 Item Ordering: Take multiple orders with quantity
+
+🌟 Chef's Recommendation: Suggests one random popular item
+
+💵 Payment Support:
+
+Cash
+
+Online UPI via QR Code (uses qrcode)
+
+📧 Email Bill: Sends order summary to user's Gmail
+
+🧾 PDF-ready format: Bill looks clean with line-wise details
+
+📢 Text-to-Speech: Alexa-style voice feedback (pyttsx3)
+
+🧠 Input Validation: Handles name, number, email, menu choice, quantity, etc.
+
+🪵 User Logs: Login and logout actions saved using logging
+
+📂 Requirements
+Install required libraries using pip:
+pip install qrcode
+pip install pyttsx3
+
+
+✅ smtplib, logging, and email.message are built-in libraries.
+
+📦 File Structure
+restaurant.py → Main Python file with all functions
+
+user1.log → Logs of user activity (login/logout)
+
+qrcode image → Automatically shown during online payment
+
+🔐 Note on Email
+To send emails:
+
+Use a Gmail address.
+
+Enable App Password in Google account security.
+
+Replace the email and password in the send_bill_email() function.
+
+🙏 Credits
+Made with ❤️ by Krishna Baranwal
+Terminal-based project for learning Python.
